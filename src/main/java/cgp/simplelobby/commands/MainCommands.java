@@ -20,6 +20,8 @@ public class MainCommands implements CommandExecutor {
         this.plugin = plugin;
     }
 
+
+    //A loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooot of code :)
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String alias, String[] args) {
 
