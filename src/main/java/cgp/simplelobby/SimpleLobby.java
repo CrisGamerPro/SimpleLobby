@@ -14,10 +14,12 @@ import java.io.File;
 
 public class SimpleLobby extends JavaPlugin {
 
+    //Variables
     public static String prefix = "&bSimpleLobby";
     public String version = getDescription().getVersion();
     public String pathConfig;
 
+    //Plugin start logic
     public void onEnable() {
         registerCommands();
         registerEvents();
@@ -28,17 +30,20 @@ public class SimpleLobby extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&',prefix+" &fHas been enabled! on version: &e"+version));
     }
 
+    //Plugin shutdown logic
     public void onDisable() {
         Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&',prefix+" &fHas been disabled! on version: &e"+version));
         Bukkit.getConsoleSender().sendMessage(MessageUtils.getColoredMessage("&fGoodBye :)"));
     }
 
+    //Register the commands :)
     public void registerCommands(){
         this.getCommand("lobby").setExecutor(new MainCommands(this));
         this.getCommand("setlobby").setExecutor(new MainCommands(this));
         this.getCommand("fly").setExecutor(new MainCommands(this));
     }
 
+    //Register the events
     public void registerEvents(){
 
         PluginManager pm = this.getServer().getPluginManager();
@@ -47,6 +52,7 @@ public class SimpleLobby extends JavaPlugin {
 
     }
 
+    //Bro the name says what do this :/
     public void registerConfig(){
         File config = new File(this.getDataFolder(), "config.yml");
         this.pathConfig = config.getPath();
