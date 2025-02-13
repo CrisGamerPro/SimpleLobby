@@ -1,0 +1,65 @@
+name: SimpleLobby
+version: 1.0.0-SNAPSHOT
+main: cgp.simplelobby.SimpleLobby
+author: CrisGamerProMC
+softdepend: [PlaceholderAPI]
+api-version: 1.13
+
+commands:
+  lobby:
+    description: Teleports you to the lobby
+    aliases:
+     - hub
+
+  setlobby:
+    description: Sets the lobby
+
+  fly:
+    description:
+
+permissions:
+  simplelobby.*:
+    description:
+    children:
+      - simplelobby.commands.*: true
+      - simplelobby.bypass.*: true
+
+  simplelobbby.commands.*:
+    description:
+    children:
+      - simplelobby.commands.lobby: true
+      - simplelobby.commands.setlobby: true
+      - simplelobby.commands.reload: true
+      - simplelobby.commands.admin-help: true
+      - simplelobby.commands.get: true
+      - simplelobby.commands.fly: true
+
+  simplelobby.commands.lobby:
+    description:
+
+  simplelobby.commands.setlobby:
+    description:
+
+  simplelobby.commands.reload:
+    description:
+
+  simplelobby.commands.get:
+    description:
+
+  simplelobby.commands.fly:
+    description:
+
+  simplelobby.commands.admin-help:
+    description:
+
+  simplelobby.bypass.*:
+    description:
+    children:
+      - simplelobby.bypass.break-place-blocks: true
+      - simplelobby.bypass.pvp: true
+
+  simplelobby.bypass.break-place-blocks:
+    description:
+
+  simplelobby.bypass.pvp:
+    description:

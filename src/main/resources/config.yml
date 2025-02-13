@@ -1,0 +1,93 @@
+Config:
+#            ╔═══╗          ╔╗     ╔╗       ╔╗  ╔╗
+#            ║╔═╗║          ║║     ║║       ║║  ║║
+#            ║╚══╗╔╗╔╗╔╗╔══╗║║ ╔══╗║║   ╔══╗║╚═╗║╚═╗╔╗ ╔╗
+#            ╚══╗║╠╣║╚╝║║╔╗║║║ ║╔╗║║║ ╔╗║╔╗║║╔╗║║╔╗║║║ ║║
+#            ║╚═╝║║║║║║║║╚╝║║╚╗║║═╣║╚═╝║║╚╝║║╚╝║║╚╝║║╚═╝║
+#            ╚═══╝╚╝╚╩╩╝║╔═╝╚═╝╚══╝╚═══╝╚══╝╚══╝╚══╝╚═╗╔╝
+#                       ║║                          ╔═╝║
+#                       ╚╝                          ╚══╝
+#  ╔══╗          ╔═══╗         ╔═══╗                ╔═══╗       ╔═╗╔═╗╔═══╗
+#  ║╔╗║          ║╔═╗║         ║╔═╗║                ║╔═╗║       ║║╚╝║║║╔═╗║
+#  ║╚╝╚╗╔╗ ╔╗    ║║ ╚╝╔═╗╔╗╔══╗║║ ╚╝╔══╗ ╔╗╔╗╔══╗╔═╗║╚═╝║╔═╗╔══╗║╔╗╔╗║║║ ╚╝
+#  ║╔═╗║║║ ║║    ║║ ╔╗║╔╝╠╣║══╣║║╔═╗╚ ╗║ ║╚╝║║╔╗║║╔╝║╔══╝║╔╝║╔╗║║║║║║║║║ ╔╗
+#  ║╚═╝║║╚═╝║    ║╚═╝║║║ ║║╠══║║╚╩═║║╚╝╚╗║║║║║║═╣║║ ║║   ║║ ║╚╝║║║║║║║║╚═╝║
+#  ╚═══╝╚═╗╔╝    ╚═══╝╚╝ ╚╝╚══╝╚═══╝╚═══╝╚╩╩╝╚══╝╚╝ ╚╝   ╚╝ ╚══╝╚╝╚╝╚╝╚═══╝
+#       ╔═╝║
+#       ╚══╝
+#
+# THANK YOU FOR DOWNLOAD THE PLUGIN ON SPIGOT!
+# This is my most biggest project! is the combination of all of my plugins! (SimpleSpawn and SimpleJoinEvents)
+# But adapted like a lobby plugin!
+# SimpleLobby config v1.0.0
+
+  #The prefix can be displayed using the variable %prefix%
+  prefix: "&b&lSimpleLobby"
+  #The lobby can be set in the game or on this file
+  lobby:
+    x:
+    y:
+    z:
+    world:
+    yaw:
+    pitch:
+  #You can customize the plugin messages
+  messages:
+    set-lobby: "%prefix% &fThe lobby has been set!"
+    teleport-message: "%prefix% &fTeleported to the lobby!"
+    teleport-error: "%prefix% &cThe lobby doesnt exit!"
+    reload-config: "%prefix% &fConfig reloaded!"
+    no-permission: "%prefix% &cYou dont have permission to do that!"
+    no-pvp: "%prefix% &cYou cant pvp here!"
+    cant-break: "%prefix% &cYou cant break blocks here!"
+    cant-place: "%prefix% &cYou cant place blocks here!"
+    fly-on: "%prefix% &fThe fly is now &2enabled&f!"
+    fly-off: "%prefix% &fThe fly is now &cdisabled&f!"
+  #You can customize the player join event
+  join-events:
+    #Can be used the %player% variable!
+    on-join-broadcast: "&2&l+ &f%player% Joined to the server!"
+    on-quit-broadcast: "&4&l- &f%player% Left the server!"
+    join-message:
+      enabled: true
+      message-strings:
+        - "&n                                                     "
+        - ""
+        - "     &fWelcome &e%player% &fto the server!"
+        - "      &eThank you for download on &6Spigot!"
+        - ""
+        - "     &fYou can edit this in the config.yml"
+        - ""
+        - "         &8Plugin by CrisGamerProMC"
+        - "&n                                                      "
+    #The firework will spawn when the player joins! colors not customizable yet...
+    firework:
+      enabled: true
+  #You can customize the blocked player events
+  lobby-blocked-events:
+    #List of enabled worlds
+    enabled-worlds:
+      - spawn
+      - lobby
+      - world
+    pvp-enabled: false
+    block-protection-enabled: true
+  scoreboard:
+    enabled: true #if you disable this, you need to restart your server.
+    ticks: 20 #The number of ticks by which the scoreboard will be updated, 20 = 1 second
+    title: "&b&lSimpleLobby"
+    text: #The scoreboard cannot have two lines that are the same, as one will be removed.
+          #To make a space between the lines I recommend using a space, and gradually increasing the amount of spaces. Example: '', '', ' '.
+      - '&m------------------------------'
+      - ''
+      - ' &fPlayer: &e%player_name%'
+      - ' &fRank: %luckperms_prefix%'
+      - ' '
+      - ' &fServer:'
+      - '  '
+      - ' &fPing: &e%player_ping%'
+      - ' &fOnline: &e%server_online%'
+      - '   '
+      - ' &7yourawesomeserver.com'
+      - '    '
+      - '&m----------------------------- '
